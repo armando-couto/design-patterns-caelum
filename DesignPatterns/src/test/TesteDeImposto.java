@@ -1,11 +1,11 @@
 package test;
 
-import main.CalculadorDeImpostos;
-import main.ICCC;
-import main.ICMS;
-import main.ISS;
-import main.Imposto;
-import main.Orcamento;
+import main.domain.Imposto;
+import main.domain.Orcamento;
+import main.imposto.CalculadorDeImpostos;
+import main.imposto.ICCC;
+import main.imposto.ICMS;
+import main.imposto.ISS;
 
 import org.junit.Before;
 import org.junit.Test;
