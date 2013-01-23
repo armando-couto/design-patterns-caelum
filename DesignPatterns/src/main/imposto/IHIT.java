@@ -3,10 +3,15 @@ package main.imposto;
 import java.util.ArrayList;
 import java.util.List;
 
+import main.domain.Imposto;
 import main.domain.Item;
 import main.domain.Orcamento;
 
 public class IHIT extends TemplateDeImpostoCondicional {
+
+	public IHIT(Imposto outroImposto) {
+		super(outroImposto);
+	}
 
 	@Override
 	protected boolean deveUsarMaximaTaxacao(Orcamento orcamento) {

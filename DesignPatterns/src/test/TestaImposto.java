@@ -10,11 +10,12 @@ import main.imposto.ISS;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TesteDeImposto {
+public class TestaImposto {
 
 	Imposto iss;
 	Imposto icms;
 	Imposto iccc;
+	Imposto impostoComplexo;
 	Orcamento orcamento;
 	CalculadorDeImpostos calculador;
 	
@@ -23,6 +24,7 @@ public class TesteDeImposto {
 		iss = new ISS();
 		icms = new ICMS();
 		iccc = new ICCC();
+		impostoComplexo = new ISS(new ICMS());
 		orcamento = new Orcamento(500.0);
 		
 		calculador = new CalculadorDeImpostos();
@@ -30,7 +32,7 @@ public class TesteDeImposto {
 	
 	@Test
 	public void realizaCalculo() {
-	
+		
 		// Calculando o ISS
 		System.out.println("ISS: "+calculador.realizaCalculo(orcamento, iss));
 		
@@ -39,5 +41,8 @@ public class TesteDeImposto {
 		
 		// Calculando o ICCC
 		System.out.println("ICCC: "+calculador.realizaCalculo(orcamento, iccc));
+		
+		// Calculando o ISS com ICMS
+		System.out.println("ISS com ICCC: "+impostoComplexo.calcula(orcamento));
 	}
 }

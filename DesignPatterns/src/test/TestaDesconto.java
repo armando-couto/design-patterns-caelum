@@ -7,7 +7,7 @@ import main.domain.Orcamento;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestaDescontos {
+public class TestaDesconto {
 
 	private CalculadorDeDescontos calculador;
 	private Orcamento orcamento;

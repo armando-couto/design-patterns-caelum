@@ -1,9 +1,14 @@
 package main.imposto;
 
+import main.domain.Imposto;
 import main.domain.Item;
 import main.domain.Orcamento;
 
 public class IKCV extends TemplateDeImpostoCondicional {
+
+	public IKCV(Imposto outroImposto) {
+		super(outroImposto);
+	}
 
 	@Override
 	protected boolean deveUsarMaximaTaxacao(Orcamento orcamento) {
